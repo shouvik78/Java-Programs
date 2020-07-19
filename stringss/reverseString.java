@@ -9,6 +9,7 @@ public class reverseString {
 		{
 			System.out.print(arr[i]);
 		}
+		
 	}
 
 }
