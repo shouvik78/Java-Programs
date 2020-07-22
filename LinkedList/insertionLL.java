@@ -52,15 +52,32 @@ public class insertionLL {
 		//return head;
 	}
 	
+	static void insertAtn(Node1 head, int data, int pos)
+	{
+		if(pos==1)
+		{
+			Node1 newNode= new Node1(data);
+			head=newNode;
+		}
+		Node1 newNode=new Node1(data);
+		Node1 temp=head;
+		for(int i=0;i<pos-2;i++)
+		{
+			temp=temp.next;
+		}
+		newNode.next=temp.next;
+		temp.next=newNode;
+	}
+	
+	static Node1 DeleteAll(Node1 head)
+	{
+		head=null;
+		return head;
+	}
+	
 
 	public static void main(String[] args) {
 		{
-			// TODO Auto-generated method stub
-//			Node1 head=new Node1(5);
-//			head.next=new Node1(6);
-//			head.next.next=new Node1(7);
-//			head.next.next.next=new Node1(8);
-//			head.next.next.next.next=new Node1(9);
 			Node1 head=new Node1(5);
 			insertAtEnd(head,1);
 			insertAtEnd(head,2);
@@ -71,6 +88,11 @@ public class insertionLL {
 			head=insertAtHead(head,4);
 			print(head);
 			insertAtEnd(head,10);
+			print(head);
+			insertAtn(head,9,4);
+			insertAtn(head,20,2);
+			print(head);
+			head=DeleteAll(head);
 			print(head);
 		}
 	}
