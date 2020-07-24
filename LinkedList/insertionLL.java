@@ -35,21 +35,21 @@ public class insertionLL {
 		return head;
 	}
 	
-	static void insertAtEnd(Node1 head, int data)
+	static Node1 insertAtEnd(Node1 head, int data)
 	{
-		/*if(head==null)
+		if(head==null)
 		{
 			Node1 newNode=new Node1(data);
 			head=newNode;
-			return;
-		}*/
+			return head;
+		}
 		Node1 newNode=new Node1(data);
 		while(head.next!=null)
 		{
 			head=head.next;
 		}
 		head.next=newNode;
-		//return head;
+		return head;
 	}
 	
 	static void insertAtn(Node1 head, int data, int pos)
