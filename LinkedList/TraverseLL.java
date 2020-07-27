@@ -1,10 +1,10 @@
 package LinkedList;
 
-class Node
+class Node3
 {
 	int data;
-	Node next;
-	Node(int data)
+	Node3 next;
+	Node3(int data)
 	{
 		this.data=data;
 		this.next=null;
@@ -13,7 +13,7 @@ class Node
 }
 public class TraverseLL {
 
-	static void print(Node head)
+	static void print(Node3 head)
 	{
 		while(head!=null)
 		{
@@ -22,11 +22,11 @@ public class TraverseLL {
 		}
 		System.out.println();
 	}
-	static Node reverse(Node head)
+	static Node3 reverse(Node3 head)
 	{
-		Node curr=head;
-		Node prev=null;
-		Node next=null;
+		Node3 curr=head;
+		Node3 prev=null;
+		Node3 next=null;
 		while(curr!=null)
 		{
 			next=curr.next;
@@ -36,37 +36,37 @@ public class TraverseLL {
 		}
 		return prev;
 	}
-	static boolean detectloop(Node head)
-	{
-		Node slow=head;
-		Node fast=head;
-		while(fast!=null && fast.next!=null)
-		{
-		slow=slow.next;
-		fast =fast.next.next;
-		if(slow==fast)
-		{
-			return true;
-		}
-		}
-			return false;
-	}
+//	static boolean detectloop(Node3 head)
+//	{
+//		Node3 slow=head;
+//		Node3 fast=head;
+//		while(fast!=null && fast.next!=null)
+//		{
+//		slow=slow.next;
+//		fast =fast.next.next;
+//		if(slow==fast)
+//		{
+//			return true;
+//		}
+//		}
+//			return false;
+//	}
 	
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
-		Node head=new Node(5);
-		head.next=new Node(6);
-		head.next.next=new Node(7);
-		head.next.next.next=new Node(8);
-		head.next.next.next.next=new Node(9);
+		Node3 head=new Node3(5);
+		head.next=new Node3(63);
+		head.next.next=new Node3(7);
+		head.next.next.next=new Node3(8);
+		head.next.next.next.next=new Node3(9);
 		head.next.next.next.next.next=head.next;
 		print(head);
 		head=reverse(head);
 		print(head);
-		if(detectloop(head))
-			System.out.println("true");
-		else
-			System.out.println("false");
+//		if(detectloop(head))
+//			System.out.println("true");
+//		else
+//			System.out.println("false");
 	}
 }
