@@ -61,6 +61,28 @@ public class BinaryTree {
 		printLevel(root.right,level-1);
 	}
 	
+	void preorder(Node root)
+	{
+		if(root==null) return;
+		System.out.print(root.data+" ");
+		preorder(root.left);
+		preorder(root.right);
+	}
+	void inorder(Node root)
+	{
+		if(root==null) return;
+		inorder(root.left);
+		System.out.print(root.data+" ");
+		inorder(root.right);
+	}
+	void postorder(Node root)
+	{
+		if(root==null) return;
+		postorder(root.left);
+		postorder(root.right);
+		System.out.print(root.data+" ");
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -76,6 +98,16 @@ public class BinaryTree {
 		System.out.print("height is ");
 		System.out.println(b.height(b.root));
 		b.printLevel(b.root, 2);
+		System.out.println();
+		System.out.print("preorder ");
+		b.preorder(b.root);
+		System.out.println();
+		System.out.print("inorder ");
+		b.inorder(b.root);
+		System.out.println();
+		System.out.print("postorder ");
+		b.postorder(b.root);
+		
 	}
 
 }
