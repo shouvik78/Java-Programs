@@ -82,6 +82,19 @@ public class BinaryTree {
 		postorder(root.right);
 		System.out.print(root.data+" ");
 	}
+	void bfsTrav(Node root)
+	{
+		
+//		int height=height(root);
+//		int levels=height+1;
+		int levels=height(root)+1;
+		System.out.println("-----Bfs-----");
+		for(int i=0;i<levels;i++)
+		{
+			printLevel(root, i);
+			System.out.println();
+		}
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -107,6 +120,8 @@ public class BinaryTree {
 		System.out.println();
 		System.out.print("postorder ");
 		b.postorder(b.root);
+		System.out.println();
+		b.bfsTrav(b.root);
 		
 	}
 
