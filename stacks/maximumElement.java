@@ -11,7 +11,7 @@ package stacks;
 	    int n = sc.nextInt();
 	    int max = Integer.MIN_VALUE;
 	    Stack<StackNode> stack = new Stack<StackNode>();
-
+//while loop
 	    while (n > 0) {
 	        int choice = sc.nextInt();
 	        if(choice == 1) {
