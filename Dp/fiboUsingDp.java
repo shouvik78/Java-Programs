@@ -7,6 +7,8 @@ public class fiboUsingDp {
 		return fib(n-1)+fib(n-2);
 	}
 	
+	//function
+	
 	static int fibDp(int n)
 	{
 		int storage[]=new int[n+1];
