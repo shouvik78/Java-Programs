@@ -1,7 +1,7 @@
 package stringss;
 import java.io.*;
 import java.util.*;
-
+//yess
 public class palindrmString
 {
 
