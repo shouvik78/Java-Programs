@@ -21,7 +21,7 @@ public class stairDp {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		int n=35;
 		System.out.println(stair(n));
 		System.out.println(stairRec(n));
