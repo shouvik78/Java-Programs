@@ -58,7 +58,7 @@ public class Deletion {
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Auto-gener
 
 		Node2 head=new Node2(5);
 		head.next=new Node2(6);
