@@ -148,7 +148,7 @@ public class BST {
 		return root;
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		BST bst = new BST();
 		bst.root = bst.insert(bst.root,15);//Receive the updated root
 		System.out.println(bst.root.data);
